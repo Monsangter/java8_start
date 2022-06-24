@@ -1,0 +1,388 @@
+What is Java?
+Java is a popular programming language, created in 1995.
+
+It is owned by Oracle, and more than 3 billion devices run Java.
+
+It is used for:
+
+Mobile applications (specially Android apps)
+Desktop applications
+Web applications
+Web servers and application servers
+Games
+Database connection
+And much, much more!
+
+Why Use Java?
+Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)
+It is one of the most popular programming language in the world
+It is easy to learn and simple to use
+It is open-source and free
+It is secure, fast and powerful
+It has a huge community support (tens of millions of developers)
+Java is an object oriented language which gives a clear structure to programs and allows code to be reused, lowering development costs
+As Java is close to C++ and C#, it makes it easy for programmers to switch to Java or vice versa
+As Java is close to C++ and C#, it makes it easy for programmers to switch to Java or vice versa
+
+Example explained
+Every line of code that runs in Java must be inside a class. In our example, we named the class Main. A class should always start with an uppercase first letter.
+
+Note: Java is case-sensitive: "MyClass" and "myclass" has different meaning.
+
+The name of the java file must match the class name. When saving the file, save it using the class name and add ".java" to the end of the filename. To run the example above on your computer, make sure that Java is properly installed: Go to the Get Started Chapter for how to install Java. The output 
+
+The main Method
+The main() method is required and you will see it in every Java program:
+
+public static void main(String[] args)
+Any code inside the main() method will be executed. Don't worry about the keywords before and after main. You will get to know them bit by bit while reading this tutorial.
+
+For now, just remember that every Java program has a class name which must match the filename, and that every program must contain the main() method.should be:
+
+System.out.println()
+Inside the main() method, we can use the println() method to print a line of text to the screen:
+
+public static void main(String[] args) {
+  System.out.println("Hello World");
+
+
+The main() method is required and you will see it in every Java program:
+
+public static void main(String[] args)
+Any code inside the main() method will be executed. Don't worry about the keywords before and after main. You will get to know them bit by bit while reading this tutorial.
+
+For now, just remember that every Java program has a class name which must match the filename, and that every program must contain the main() method.
+}
+Note: The curly braces {} marks the beginning and the end of a block of code.
+
+System is a built-in Java class that contains useful members, such as out, which is short for "output". The println() method, short for "print line", is used to print a value to the screen (or a file).
+
+Don't worry too much about System, out and println(). Just know that you need them together to print stuff to the screen.
+
+You should also note that each code statement must end with a semicolon (;).
+
+Note that we don't use double quotes ("") inside println() to output numbers.
+
+Note that we don't use double quotes ("") inside println() to output numbers.
+
+Note that we add an extra space (after "Hello World!" in the example above), for better readability.
+
+In this tutorial, we will only use println() as it makes it easier to read the output of code.
+
+Java Comments
+Comments can be used to explain Java code, and to make it more readable. It can also be used to prevent execution when testing alternative code.
+
+Single-line Comments
+Single-line comments start with two forward slashes (//).
+
+Any text between // and the end of the line is ignored by Java (will not be executed).
+
+This example uses a single-line comment before a line of code:
+Java Multi-line Comments
+Multi-line comments start with /* and ends with */.
+
+Any text between /* and */ will be ignored by Java.
+
+This example uses a multi-line comment (a comment block) to explain the code:
+
+Java Variables
+Variables are containers for storing data values.
+
+In Java, there are different types of variables, for example:
+
+String - stores text, such as "Hello". String values are surrounded by double quotes
+int - stores integers (whole numbers), without decimals, such as 123 or -123
+float - stores floating point numbers, with decimals, such as 19.99 or -19.99
+char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes
+boolean - stores values with two states: true or false
+
+Where type is one of Java's types (such as int or String), and variableName is the name of the variable (such as x or name). The equal sign is used to assign values to the variable.
+
+To create a variable that should store text, look at the following example:
+
+Where type is one of Java's types (such as int or String), and variableName is the name of the variable (such as x or name). The equal sign is used to assign values to the variable.
+
+To create a variable that should store text, look at the following example:
+
+Example
+Create a variable called name of type String and assign it the value "John":
+
+String name = "John";
+System.out.println(name);
+Try it Yourself »
+
+To create a variable that should store a number, look at the following example:
+
+Example
+Create a variable called myNum of type int and assign it the value 15:
+
+int myNum = 15;
+System.out.println(myNum);
+Try it Yourself »
+
+You can also declare a variable without assigning the value, and assign the value later:
+
+Example
+int myNum;
+myNum = 15;
+System.out.println(myNum);
+Try it Yourself »
+
+Note that if you assign a new value to an existing variable, it will overwrite the previous value:
+
+Example
+Change the value of myNum from 15 to 20:
+
+int myNum = 15;
+myNum = 20;  // myNum is now 20
+System.out.println(myNum);
+
+
+If you don't want others (or yourself) to overwrite existing values, use the final keyword (this will declare the variable as "final" or "constant", which means unchangeable and read-only):
+
+Other Types
+A demonstration of how to declare variables of other types:
+
+Example
+int myNum = 5;
+float myFloatNum = 5.99f;
+char myLetter = 'D';
+boolean myBool = true;
+String myText = "Hello";
+
+For numeric values, the + character works as a mathematical operator (notice that we use int (integer) variables here):
+
+From the example above, you can expect:
+
+x stores the value 5
+y stores the value 6
+Then we use the println() method to display the value of x + y, which is 11
+
+Identifiers
+All Java variables must be identified with unique names.
+
+These unique names are called identifiers.
+
+Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).
+
+Note: It is recommended to use descriptive names in order to create understandable and maintainable code:
+
+Example
+// Good
+int minutesPerHour = 60;
+
+// OK, but not so easy to understand what m actually is
+int m = 60;
+
+The general rules for naming variables are:
+
+Names can contain letters, digits, underscores, and dollar signs
+Names must begin with a letter
+Names should start with a lowercase letter and it cannot contain whitespace
+Names can also begin with $ and _ (but we will not use it in this tutorial)
+Names are case sensitive ("myVar" and "myvar" are different variables)
+Reserved words (like Java keywords, such as int or boolean) cannot be used as names
+byte	1 byte	Stores whole numbers from -128 to 127
+short	2 bytes	Stores whole numbers from -32,768 to 32,767
+int	4 bytes	Stores whole numbers from -2,147,483,648 to 2,147,483,647
+long	8 bytes	Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+float	4 bytes	Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
+double	8 bytes	Stores fractional numbers. Sufficient for storing 15 decimal digits
+boolean	1 bit	Stores true or false values
+char	2 bytes	Stores a single character/letter or ASCII values
+
+Floating point types represents numbers with a fractional part, containing one or more decimals. There are two types: float and double.
+
+Even though there are many numeric types in Java, the most used for numbers are int (for whole numbers) and double (for floating point numbers). However, we will describe them all as you continue to read
+
+Integer Types
+Byte
+The byte data type can store whole numbers from -128 to 127. This can be used instead of int or other integer types to save memory when you are certain that the value will be within -128 and 127:
+
+Short
+The short data type can store whole numbers from -32768 to 32767:
+
+Example
+short myNum = 5000;
+System.out.println(myNum);
+Try it Yourself »
+
+Int
+The int data type can store whole numbers from -2147483648 to 2147483647. In general, and in our tutorial, the int data type is the preferred data type when we create variables with a numeric value.
+
+Long
+The long data type can store whole numbers from -9223372036854775808 to 9223372036854775807. This is used when int is not large enough to store the value. Note that you should end the value with an "L":
+
+You should use a floating point type whenever you need a number with a decimal, such as 9.99 or 3.14515.
+
+The float and double data types can store fractional numbers. Note that you should end the value with an "f" for floats and "d" for doubles:
+
+Use float or double?
+
+The precision of a floating point value indicates how many digits the value can have after the decimal point. The precision of float is only six or seven decimal digits, while double variables have a precision of about 15 digits. Therefore it is safer to use double for most calculations.
+
+Characters
+The char data type is used to store a single character. The character must be surrounded by single quotes, like 'A' or 'c':
+
+Example
+char myGrade = 'B';
+System.out.println(myGrade);
+Try it Yourself »
+
+Alternatively, if you are familiar with ASCII values, you can use those to display certain characters:
+
+Example
+char myVar1 = 65, myVar2 = 66, myVar3 = 67;
+System.out.println(myVar1);
+System.out.println(myVar2);
+System.out.println(myVar3);
+Try it Yourself »
+
+Tip: A list of all ASCII values can be found in our ASCII Table Reference.
+
+Strings
+The String data type is used to s
+
+The String type is so much used and integrated in Java, that some call it "the special ninth type".
+
+A String in Java is actually a non-primitive data type, because it refers to an object. The String object has methods that are used to perform certain operations on strings. Don't worry if you don't understand the term "object" just yet. We will learn more about strings and objects in a later chapter.tore a sequence of characters (text). String values must be surrounded by double quotes:
+
+Non-Primitive Data Types
+Non-primitive data types are called reference types because they refer to objects.
+
+The main difference between primitive and non-primitive data types are:
+
+Primitive types are predefined (already defined) in Java. Non-primitive types are created by the programmer and is not defined by Java (except for String).
+Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.
+A primitive type has always a value, while non-primitive types can be null.
+A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.
+The size of a primitive type depends on the data type, while non-primitive types have all the same size.
+Examples of non-primitive types are Strings, Arrays, Classes, Interface, etc. You will learn more about these in a later chapter
+Non-Primitive Data Types
+Non-primitive data types are called reference types because they refer to objects.
+
+The main difference between primitive and non-primitive data types are:
+
+Primitive types are predefined (already defined) in Java. Non-primitive types are created by the programmer and is not defined by Java (except for String).
+Non-primitive types can be used to call methods to perform certain operations, while primitive types cannot.
+A primitive type has always a value, while non-primitive types can be null.
+A primitive type starts with a lowercase letter, while non-primitive types starts with an uppercase letter.
+The size of a primitive type depends on the data type, while non-primitive types have all the same size.
+Examples of non-primitive types are Strings, Arrays, Classes, Interface, etc. You will learn more about these in a later chapter
+Widening Casting
+Widening casting is done automatically when passing a smaller size type to a larger size type:
+
+Example
+public class Main {
+  public static void main(String[] args) {
+    int myInt = 9;
+    double myDouble = myInt; // Automatic casting: int to double
+
+    System.out.println(myInt);      // Outputs 9
+    System.out.println(myDouble);   // Outputs 9.0
+  }
+
+
+Java Type Casting
+Type casting is when you assign a value of one primitive data type to another type.
+
+In Java, there are two types of casting:
+
+Widening Casting (automatically) - converting a smaller type to a larger type size
+byte -> short -> char -> int -> long -> float -> double
+
+Narrowing Casting (manually) - converting a larger type to a smaller size type
+double -> float -> long -> int -> char -> short -> byte
+Widening Casting
+Widening casting is done automatically when passing a smaller size type to a larger size type:
+
+Example
+public class Main {
+  public static void main(String[] args) {
+    int myInt = 9;
+    double myDouble = myInt; // Automatic casting: int to double
+
+    System.out.println(myInt);      // Outputs 9
+    System.out.println(myDouble);   // Outputs 9.0
+  }
+}
+Try it Yourself »
+
+Narrowing Casting
+Narrowing casting must be done manually by placing the type in parentheses in front of the value:
+
+Example
+public class Main {
+  public static void main(String[] args) {
+    double myDouble = 9.78d;
+    int myInt = (int) myDouble; // Manual casting: double to int
+
+    System.out.println(myDouble);   // Outputs 9.78
+    System.out.println(myInt);      // Outputs 9
+  }
+} 
+Java Type Casting
+Type casting is when you assign a value of one primitive data type to another type.
+
+In Java, there are two types of casting:
+
+Widening Casting (automatically) - converting a smaller type to a larger type size
+byte -> short -> char -> int -> long -> float -> double
+
+Narrowing Casting (manually) - converting a larger type to a smaller size type
+double -> float -> long -> int -> char -> short -> byte
+Widening Casting
+Widening casting is done automatically when passing a smaller size type to a larger size type:
+
+Example
+public class Main {
+  public static void main(String[] args) {
+    int myInt = 9;
+    double myDouble = myInt; // Automatic casting: int to double
+
+    System.out.println(myInt);      // Outputs 9
+    System.out.println(myDouble);   // Outputs 9.0
+  }
+}
+Try it Yourself »
+
+Narrowing Casting
+Narrowing casting must be done manually by placing the type in parentheses in front of the value:
+
+Example
+public class Main {
+  public static void main(String[] args) {
+    double myDouble = 9.78d;
+    int myInt = (int) myDouble; // Manual casting: double to int
+
+    System.out.println(myDouble);   // Outputs 9.78
+    System.out.println(myInt);      // Outputs 9
+  }
+}
+
+Although the + operator is often used to add together two values, like in the example above, it can also be used to add together a variable and a value, or a variable and another variable:
+
+Example
+int sum1 = 100 + 50;        // 150 (100 + 50)
+int sum2 = sum1 + 250;      // 400 (150 + 250)
+int sum3 = sum2 + sum2;     // 800 (400 + 400)
+Try it Yourself »
+
+Java divides the operators into the following groups:
+
+Arithmetic operators
+Assignment operators
+Comparison operators
+Logical operators
+Bitwise operators
+Arithmetic Operators
+Arithmetic operators are used to perform common mathematical operations.
+
+Operator	Name	Description	Example	Try it
++	Addition	Adds together two values	x + y	Try it »
+-	Subtraction	Subtracts one value from another	x - y	Try it »
+*	Multiplication	Multiplies two values	x * y	Try it »
+/	Division	Divides one value by another	x / y	Try it »
+%	Modulus	Returns the division remainder	x % y	Try it »
+++	Increment	Increases the value of a variable by 1	++x	Try it »
+--	Decrement	Decreases the value of a variable by 1	--x	Try it »
