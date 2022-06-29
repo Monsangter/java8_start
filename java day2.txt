@@ -1,0 +1,501 @@
+
+Java Assignment Operators
+Assignment operators are used to assign values to variables.
+
+In the example below, we use the assignment operator (=) to assign the value 10 to a variable called x:
+
+Example
+int x = 10;
+Try it Yourself »
+
+The addition assignment operator (+=) adds a value to a variable:
+
+&
+				a & b
+				a와 b의 and 계산 ex) 4(0100) & 5(0101) = 4(0100)
+			
+			
+				|
+				a | b
+				a와 b의 or 계산 ex) 4(0100) | 5(0101) = 5(0101)
+			
+			
+				^
+				a ^ b
+				a와 b의 xor 계산 ex) 4(0100) ^ 5(0101) = 1(0001)
+출처: https://nowonbun.tistory.com/293 [명월 일지:티스토리]
+
+<<
+				a << b
+				정수 a의 2진수 값을 왼쪽으로 b만큼 이동시키고 나머지는 0으로 채움
+			
+			
+				>>
+				a >> b
+				정수 a의 2진수 값을 오른쪽으로 b만큼 이동시키고 나머지를 양수는 0으로 음수는 1로 채움
+출처: https://nowonbun.tistory.com/293 [명월 일지:티스토리]
+tring Concatenation
+The + operator can be used between strings to combine them. This is called concatenation:
+
+Example
+String firstName = "John";
+String lastName = "Doe";
+System.out.println(firstName + " " + lastName);
+Try it Yourself »
+
+Note that we have added an empty text (" ") to create a space between firstName and lastName on print.
+
+You can also use the concat() method to concatenate two strings:
+
+Adding Numbers and Strings
+WARNING!
+
+Java uses the + operator for both addition and concatenation.
+
+Numbers are added. Strings are concatenated.
+
+If you add two numbers, the result will be a number:
+
+Example
+int x = 10;
+int y = 20;
+int z = x + y;  // z will be 30 (an integer/number)
+Try it Yourself »
+
+If you add two strings, the result will be a string concatenation:
+
+Example
+String x = "10";
+String y = "20";
+String z = x + y;  // z will be 1020 (a String)
+Try it Yourself »
+
+If you add a number and a string, the result will be a string concatenation:
+
+Special Characters
+Because strings must be written within quotes, Java will misunderstand this string, and generate an error:
+
+String txt = "We are the so-called "Vikings" from the north.";
+The solution to avoid this problem, is to use the backslash escape character.
+
+The backslash (\) escape character turns special characters into string characters:
+
+Escape character	Result	Description
+\'	'	Single quote
+\"	"	Double quote
+\\	\	Backslash
+Code	Result	Try it
+\n	New Line	Try it »
+\r	Carriage Return	Try it »
+\t	Tab	Try it »
+\b	Backspace	Try it »
+\f	Form Feed
+
+Math.max(x,y)
+The Math.max(x,y) method can be used to find the highest value of x and y:
+
+Example
+Math.max(5, 10);
+Try it Yourself »
+
+Math.min(x,y)
+The Math.min(x,y) method can be used to find the lowest value of x and y:
+
+Example
+Math.min(5, 10);
+Try it Yourself »
+
+Math.sqrt(x)
+The Math.sqrt(x) method returns the square root of x:
+
+Example
+Math.sqrt(64);
+Try it Yourself »
+
+Math.abs(x)
+The Math.abs(x) method returns the absolute (positive) value of x:
+
+Example
+Math.abs(-4.7);
+Try it Yourself »
+
+Random Numbers
+Math.random() returns a random number between 0.0 (inclusive), and 1.0 (exclusive):
+
+Example
+Math.random();
+Try it Yourself »
+
+To get more control over the random number, e.g. you only want a random number between 0 and 100, you can use the following formula:
+
+Example
+int randomNum = (int)(Math.random() * 101);  // 0 to 100
+Try it Yourself »
+
+Complete Math Reference
+For a complete reference of Math methods, go to our Java Math Methods Reference.
+
+Java Booleans
+Very often, in programming, you will need a data type that can only have one of two values, like:
+
+YES / NO
+ON / OFF
+TRUE / FALSE
+For this, Java has a boolean data type, which can take the values true or false.
+
+
+Java Booleans
+Very often, in programming, you will need a data type that can only have one of two values, like:
+
+YES / NO
+ON / OFF
+TRUE / FALSE
+For this, Java has a boolean data type, which can take the values true or false.
+
+Boolean Values
+A boolean type is declared with the boolean keyword and can only take the values true or false:
+
+Example
+boolean isJavaFun = true;
+boolean isFishTasty = false;
+System.out.println(isJavaFun);     // Outputs true
+System.out.println(isFishTasty);   // Outputs false
+Try it Yourself »
+
+However, it is more common to return boolean values from boolean expressions, for conditional testing (see below).
+
+Boolean Expression
+A Boolean expression is a Java expression that returns a Boolean value: true or false.
+
+You can use a comparison operator, such as the greater than (>) operator to find out if an expression (or a variable) is true:
+
+Example
+int x = 10;
+int y = 9;
+System.out.println(x > y); // returns true, because 10 is higher than 9
+Try it Yourself »
+
+Or even easier:
+
+Example
+System.out.println(10 > 9); // returns true, because 10 is higher than 9
+Try it Yourself »
+
+In the examples below, we use the equal to (==) operator to evaluate an expression:
+
+Example
+int x = 10;
+System.out.println(x == 10); // returns true, because the value of x is equal to 10
+Try it Yourself »
+
+Example
+System.out.println(10 == 15); // returns false, because 10 is not equal to 15
+Try it Yourself »
+
+The Boolean value of an expression is the basis for all Java comparisons and conditions.
+
+You will learn more about conditions in the next chapter.
+
+Java Conditions and If Statements
+Java supports the usual logical conditions from mathematics:
+
+Less than: a < b
+Less than or equal to: a <= b
+Greater than: a > b
+Greater than or equal to: a >= b
+Equal to a == b
+Not Equal to: a != b
+You can use these conditions to perform different actions for different decisions.
+
+Java has the following conditional statements:
+
+Use if to specify a block of code to be executed, if a specified condition is true
+Use else to specify a block of code to be executed, if the same condition is false
+Use else if to specify a new condition to test, if the first condition is false
+Use switch to specify many alternative blocks of code to be executed
+
+The if Statement
+Use the if statement to specify a block of Java code to be executed if a condition is true.
+
+Syntax
+if (condition) {
+  // block of code to be executed if the condition is true
+}
+Note that if is in lowercase letters. Uppercase letters (If or IF) will generate an error.
+
+In the example below, we test two values to find out if 20 is greater than 18. If the condition is true, print some text:
+
+Example
+if (20 > 18) {
+  System.out.println("20 is greater than 18");
+}
+Try it Yourself »
+
+We can also test variables:
+
+Example
+int x = 20;
+int y = 18;
+if (x > y) {
+  System.out.println("x is greater than y");
+}
+Try it Yourself »
+
+Example explained
+
+In the example above we use two variables, x and y, to test whether x is greater than y (using the > operator). As x is 20, and y is 18, and we know that 20 is greater than 18, we print to the screen that "x is greater than y".
+
+Example explained
+
+In the example above, time (20) is greater than 18, so the condition is false. Because of this, we move on to the else condition and print to the screen "Good evening". If the time was less than 18, the program would print "Good day".
+
+The else if Statement
+Use the else if statement to specify a new condition if the first condition is false.
+
+Syntax
+if (condition1) {
+  // block of code to be executed if condition1 is true
+} else if (condition2) {
+  // block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  // block of code to be executed if the condition1 is false and condition2 is false
+}
+Example
+int time = 22;
+if (time < 10) {
+  System.out.println("Good morning.");
+} else if (time < 20) {
+  System.out.println("Good day.");
+} else {
+  System.out.println("Good evening.");
+}
+// Outputs "Good evening."
+ 
+Try it Yourself »
+
+Example explained
+
+In the example above, time (22) is greater than 10, so the first condition is false. The next condition, in the else if statement, is also false, so we move on to the else condition since condition1 and condition2 is both false - and print to the screen "Good evening".
+
+However, if the time was 14, our program would print "Good day."
+
+Short Hand If...Else
+There is also a short-hand if else, which is known as the ternary operator because it consists of three operands.
+
+It can be used to replace multiple lines of code with a single line, and is most often used to replace simple if else statements:
+
+Syntax
+variable = (condition) ? expressionTrue :  expressionFalse;
+
+Java Switch Statements
+Use the switch statement to select one of many code blocks to be executed.
+
+Syntax
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+This is how it works:
+
+switch(day){
+	case x:
+	  break;
+  Case y:
+Asdfasdfasdf
+}
+
+The switch expression is evaluated once.
+The value of the expression is compared with the values of each case.
+If there is a match, the associated block of code is executed.
+The break and default keywords are optional, and will be described later in this chapter
+The default Keyword
+The default keyword specifies some code to run if there is no case match:
+
+Example
+int day = 4;
+switch (day) {
+  case 6:
+    System.out.println("Today is Saturday");
+    break;
+  case 7:
+    System.out.println("Today is Sunday");
+    break;
+  default:
+    System.out.println("Looking forward to the Weekend");
+}
+// Outputs "Looking forward to the Weekend"
+
+Note that if the default statement is used as the last statement in a switch block, it does not need a break.
+
+Handy 	편리한, 가까운 곳에 있는. 손재주 있는.
+
+
+to be handy around the house 이런저런 집안 잔손질을 잘 보다
+
+In the example below, the code in the loop will run, over and over again, as long as a variable (i) is less than 5:
+
+The Do/While Loop
+The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+Syntax
+do {
+  // code block to be executed
+}
+while (condition);
+The example below uses a do/while loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:
+
+for (int i = 0; i < 5; i++) {
+  System.out.println(i);
+
+Statement 1 is executed (one time) before the execution of the code block.
+
+Statement 2 defines the condition for executing the code block.
+
+Statement 3 is executed (every time) after the code block has been executed.
+
+The example below will print the numbers 0 to 4:
+
+
+}
+
+ample explained
+
+Statement 1 sets a variable before the loop starts (int i = 0).
+
+Statement 2 defines the condition for the loop to run (i must be less than 5). If the condition is true, the loop will start over again, if it is false, the loop will end.
+
+Statement 3 increases a value (i++) each time the code block in the loop has been executed.
+
+Another Example
+This example will only print even values between 0 and 10:
+
+for (int i = 0; i <= 10; i = i + 2) {
+  System.out.println(i);
+}
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (String i : cars) {
+  System.out.println(i);
+}
+
+In the loop, when the value is "4", jump directly to the next value.
+
+Continue;
+
+Java Break
+You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch statement.
+
+The break statement can also be used to jump out of a loop.
+
+This example stops the loop when i is equal to 4:
+
+Break and Continue in While Loop
+You can also use break and continue in while loops:
+
+Java Arrays
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+
+To declare an array, define the variable type with square brackets:
+
+String[] cars;
+
+We have now declared a variable that holds an array of strings. To insert values to it, we can use an array literal - place the values in a comma-separated list, inside curly braces:
+
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"}
+
+To create an array of integers, you could write:
+
+int[] myNum = {10, 20, 30, 40};
+
+Access the Elements of an Array
+You access an array element by referring to the index number.
+
+This statement accesses the value of the first element in cars:
+
+Example
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars[0]);
+// Outputs Volvo
+
+Change an Array Element
+To change the value of a specific element, refer to the index number:
+
+Example
+cars[0] = "Opel";
+
+Array Length
+To find out how many elements an array has, use the length property:
+
+Example
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars.length);
+// Outputs 4
+
+Array Length
+To find out how many elements an array has, use the length property:
+
+Example
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars.length);
+// Outputs 4
+
+Loop Through an Array
+You can loop through the array elements with the for loop, and use the length property to specify how many times the loop should run.
+
+The following example outputs all elements in the cars array:
+
+Example
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+for (int i = 0; i < cars.length; i++) {
+  System.out.println(cars[i]);
+}
+
+Loop Through an Array with For-Each
+There is also a "for-each" loop, which is used exclusively to loop through elements in arrays:
+
+Syntax
+for (type variable : arrayname) {
+  ...
+}
+The following example outputs all elements in the cars array, using a "for-each" loop:
+
+he example above can be read like this: for each String element (called i - as in index) in cars, print out the value of i.
+
+If you compare the for loop and for-each loop, you will see that the for-each method is easier to write, it does not require a counter (using the length property), and it is more readable.
+
+Multidimensional Arrays
+A multidimensional array is an array of arrays.
+
+To create a two-dimensional array, add each array within its own set of curly braces:
+
+Example
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+myNumbers is now an array with two arrays as its elements.
+
+To access the elements of the myNumbers array, specify two indexes: one for the array, and one for the element inside that array. This example accesses the third element (2) in the second array (1) of myNumbers:
+
+Example
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+int x = myNumbers[1][2];
+System.out.println(x); // Outputs 7
+Try it Yourself »
+
+We can also use a for loop inside another for loop to get the elements of a two-dimensional array (we still have to point to the two indexes):
+
+Example
+public class Main {
+  public static void main(String[] args) {
+    int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+    for (int i = 0; i < myNumbers.length; ++i) {
+      for(int j = 0; j < myNumbers[i].length; ++j) {
+        System.out.println(myNumbers[i][j]);
+      }
+    }
+  }
+}
